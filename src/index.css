@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", serif;
+}
+
+:root {
+  --bg: #0F1012;
+  --bg-darker: #080809;
+  --zinc-100: #F4F4F5;
+  --zinc-200: #E4E4E7;
+  --zinc-300: #D4D4D8;
+  --zinc-400: #A1A1AA;
+  --zinc-500: #71717A;
+  --zinc-600: #52525B;
+  --zinc-700: #3F3F46;
+  --zinc-800: #27272A;
+  --zinc-900: #18181B;
+  --accent: #f97316; /* orange-500 */
+  --accent-glow: rgba(249, 115, 22, 0.4);
+  --success: #10b981; /* emerald-500 */
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--bg)] text-[var(--zinc-100)] font-sans antialiased overflow-hidden;
+  }
+}
+
+.grid-bg {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.gate-card-editorial {
+  @apply bg-[var(--zinc-900)] border border-[var(--zinc-800)] hover:border-[var(--zinc-600)] transition-all cursor-pointer;
+}
+
+.port-editorial {
+  @apply w-2 h-2 rounded-full border border-[var(--zinc-700)] bg-[var(--bg)] hover:bg-[var(--accent)] transition-colors cursor-crosshair;
+}
+
+.port-active-editorial {
+  @apply bg-[var(--accent)] border-[var(--accent)] shadow-[0_0_8px_var(--accent-glow)];
+}
+
+.section-label {
+  @apply text-[10px] font-bold tracking-[0.2em] text-[var(--zinc-600)] uppercase block;
+}
+
+.mono-label {
+  @apply text-[9px] font-mono text-[var(--zinc-500)] uppercase tracking-tighter;
+}
+
+.serif-italic {
+  @apply font-serif italic;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[var(--bg)];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[var(--zinc-800)] rounded-full hover:bg-[var(--zinc-700)];
+}
+

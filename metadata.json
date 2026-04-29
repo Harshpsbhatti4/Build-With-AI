@@ -1,0 +1,6 @@
+{
+  "name": "LogiCraft: VLSI Logic Simulator",
+  "description": "A professional-grade logic gate simulator for VLSI engineers to design and test digital circuits with AND, OR, NOT, XOR, NAND, and NOR gates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
